@@ -80,15 +80,6 @@ Sample data is automatically inserted using your database creation script.
   <img src="https://raw.githubusercontent.com/zouhour13/text-to-sql-streamlit/main/screenshot.png" width="600">
 </p>
 
-text-to-sql-streamlit/
-│── app.py
-│── mydata.py (optional)
-│── company.db
-│── .env              # not in GitHub
-│── .gitignore
-│── requirements.txt
-└── README.md
-
 🎨 UI Preview
 
 The app includes:
