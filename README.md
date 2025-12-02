@@ -73,7 +73,13 @@ BONUS	INT
 
 Sample data is automatically inserted using your database creation script.
 
+
 📁 Project Structure
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zouhour13/text-to-sql-streamlit/main/screenshot.png" width="600">
+</p>
+
 text-to-sql-streamlit/
 │── app.py
 │── mydata.py (optional)
@@ -98,9 +104,5 @@ centered title and description
 ❤️ Made By
 
 Zouhour Bellamine
-AI & Data Engineering Student
-Tunis, Tunisia
-
-Zouhour Bellamine
-AI & Data Engineering Student
+AI & Data Engineer
 Tunis, Tunisia
