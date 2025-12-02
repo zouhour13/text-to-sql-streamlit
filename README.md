@@ -76,9 +76,7 @@ Sample data is automatically inserted using your database creation script.
 
 📁 Project Structure
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/zouhour13/text-to-sql-streamlit/main/Screenshot.png" width="600">
-</p>
+![UI Screenshot](Screenshot.png)
 
 🎨 UI Preview
 
