@@ -1,6 +1,6 @@
 # 💬 Text-to-SQL Data Assistant
 
-A Streamlit application that translates natural-language questions into SQL and runs them against a sample employee database. It combines Groq's hosted Llama 3.3 model with LangChain, SQLite, and a focused browser interface.
+A Streamlit application that translates natural-language questions into SQL and runs them against a sample employee database. It combines Groq's hosted GPT-OSS 120B model with LangChain, SQLite, and a focused browser interface.
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.50-FF4B4B?logo=streamlit&logoColor=white)
@@ -25,7 +25,7 @@ SQL can be a barrier for people who need quick answers from structured data. Thi
 flowchart LR
     A[User question] --> B[Streamlit interface]
     B --> C[LangChain prompt]
-    C --> D[Groq: Llama 3.3 70B]
+    C --> D[Groq: GPT-OSS 120B]
     D --> E[Generated SQL]
     E --> F[(SQLite company.db)]
     F --> G[Results in Streamlit]
@@ -33,7 +33,7 @@ flowchart LR
 
 1. The user enters a question in `app.py`.
 2. A prompt supplies the `EMPLOYEE` table schema and example queries.
-3. Groq's `llama-3.3-70b-versatile` model returns SQL through LangChain's string parser.
+3. Groq's `openai/gpt-oss-120b` model returns SQL through LangChain's string parser.
 4. Python's built-in `sqlite3` module executes the SQL against `company.db`.
 5. Streamlit shows the generated query and result rows.
 
@@ -45,7 +45,7 @@ flowchart LR
 | Streamlit | Interactive web interface |
 | LangChain Core | Prompt composition and output parsing |
 | LangChain Groq | Groq chat-model integration |
-| Groq API | Llama 3.3 model inference |
+| Groq API | GPT-OSS 120B model inference |
 | SQLite | Local sample employee database |
 | python-dotenv | Local environment-variable loading |
 

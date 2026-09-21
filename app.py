@@ -47,7 +47,7 @@ def get_sql_query(user_query):
         No preamble, only the valid SQL query.
     
                                                   """)
-    model="llama-3.3-70b-versatile"
+    model="openai/gpt-oss-120b"
     api_key = get_groq_api_key()
     if not api_key:
         raise RuntimeError(
