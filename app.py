@@ -1,5 +1,7 @@
 
 import os
+from pathlib import Path
+
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
@@ -9,7 +11,21 @@ import streamlit as st
 
 
 # Charger le fichier .env
-load_dotenv() 
+load_dotenv()
+
+BASE_DIR = Path(__file__).resolve().parent
+DATABASE_PATH = BASE_DIR / "company.db"
+
+
+def get_groq_api_key():
+    api_key = os.getenv("GROQ_API_KEY")
+    if api_key:
+        return api_key
+
+    try:
+        return st.secrets["GROQ_API_KEY"]
+    except (KeyError, FileNotFoundError):
+        return None
 
 
 def get_sql_query(user_query):
@@ -32,10 +48,14 @@ def get_sql_query(user_query):
     
                                                   """)
     model="llama-3.3-70b-versatile"
-    llm = ChatGroq(
-    groq_api_key = os.environ.get("GROQ_API_KEY"),
-    model_name=model
-    )
+    api_key = get_groq_api_key()
+    if not api_key:
+        raise RuntimeError(
+            "GROQ_API_KEY is not configured. Add it to your environment or "
+            "Streamlit secrets."
+        )
+
+    llm = ChatGroq(groq_api_key=api_key, model_name=model)
 
     chain = groq_sys_prompt | llm | StrOutputParser()
     response = chain.invoke({"user_query": user_query})
@@ -43,8 +63,7 @@ def get_sql_query(user_query):
 
 
 def return_sql_response(sql_query):
-    mydata = "company.db"
-    with sqlite3.connect(mydata) as conn:
+    with sqlite3.connect(DATABASE_PATH) as conn:
         return conn.execute(sql_query).fetchall()
 
 
