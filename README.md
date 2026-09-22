@@ -10,6 +10,12 @@ A Streamlit application that translates natural-language questions into SQL and 
 
 [Try the application](https://text-to-sql-app-ilnwyv6bb3qqpb2w6e47bw.streamlit.app/)
 
+## 🎥 Video Demo
+
+Watch a walkthrough of the Text-to-SQL workflow and application interface:
+
+[![Watch the Text-to-SQL application demo](https://img.youtube.com/vi/9NiI0LlIcbY/maxresdefault.jpg)](https://youtu.be/9NiI0LlIcbY)
+
 ## 🎯 Problem
 
 SQL can be a barrier for people who need quick answers from structured data. This project demonstrates a simple Text-to-SQL workflow: a user asks a question in English, the language model generates a query for a known schema, and the application returns the matching database rows.
