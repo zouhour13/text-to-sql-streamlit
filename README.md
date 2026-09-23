@@ -4,7 +4,7 @@ A Streamlit application that translates natural-language questions into SQL and 
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.50-FF4B4B?logo=streamlit&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)
 
 ## 🚀 Live Demo
 
@@ -83,7 +83,7 @@ text-to-sql-streamlit/
 ├── student.db          # Database created by database.py
 ├── Screenshot .png     # Application preview
 ├── requirements.txt    # Pinned runtime dependencies
-├── LICENSE             # MIT License
+├── LICENSE             # Proprietary license
 └── README.md
 ```
 
@@ -191,4 +191,9 @@ AI & Data Engineer · Tunis, Tunisia
 
 ## 📄 License
 
-Distributed under the MIT License. See [LICENSE](LICENSE) for details.
+Copyright © 2026 Zouhour Bellamine. All rights reserved.
+
+This repository is publicly available for viewing and recruitment/educational
+evaluation purposes. No permission is granted to copy, fork, modify,
+redistribute, publish, or commercially use the source code without prior
+written permission from the copyright holder.
